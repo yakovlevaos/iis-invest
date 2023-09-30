@@ -1,0 +1,853 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
+    />
+    <title>IIS Consulting</title>
+  </head>
+  <body>
+    <!-- Mob menu -->
+    <div class="mobmenu">
+      <a class="mobmenu-ref" href="#vs">
+        <img src="./img/risk-money.svg" alt="" />
+        <div>Доходность</div>
+      </a>
+      <a class="mobmenu-ref" href="#risks">
+        <img src="./img/risk-mob.png" alt="" />
+        <div>Риски</div>
+      </a>
+      <a class="mobmenu-ref" href="tel:+79778209308">
+        <img src="./img/tel-call.png" alt="" />
+        <div>Позвонить</div>
+      </a>
+      <a class="mobmenu-ref" href="#">
+        <img
+          style="transform: rotate(270deg)"
+          src="./img/arrow-next.svg"
+          alt=""
+        />
+        <div>Наверх</div>
+      </a>
+    </div>
+    <!-- Mob menu -->
+    <!-- Modal window -->
+    <div id="openModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a href="#" onClick="returnFunction()" title="Close" class="close"
+              ><img class="img-close" src="./img/Cross.svg" alt="close"
+            /></a>
+          </div>
+          <div class="modal-body">
+            <div class="modal-form">
+              <div class="modal-text">
+                <p class="modal-heading">бесплатная консультация</p>
+                <p class="modal-text-main">
+                  Оставьте заявку на бесплатную консультацию и мы перезвоним вам
+                </p>
+              </div>
+              <form action="#" id="modalForm" class="fm-modal">
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Имя"
+                  value=""
+                  class="fm__input _modal"
+                />
+                <div>
+                  <input
+                    name="tel"
+                    type="tel"
+                    placeholder="Телефон"
+                    value=""
+                    data-phone="cleave"
+                    class="fm__input _modal _modalreq"
+                  />
+                  <p class="required-field">
+                    Это поле обязательно для заполнения
+                  </p>
+                </div>
+                <textarea
+                  style="resize: none; overflow: hidden"
+                  name="msg"
+                  type="text"
+                  placeholder="Сообщение"
+                  value=""
+                  class="fm__input _modal"
+                ></textarea>
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    class="custom-checkbox"
+                    id="checkbox"
+                    name="checkbox"
+                    value="yes"
+                    required
+                  />
+                  <label for="checkbox"
+                    ><p class="checkbox-text">
+                      Согласен с
+                      <a class="checkbox-text" href="#"
+                        >политикой обработки персональных данных</a
+                      >
+                    </p></label
+                  >
+                </div>
+                <button type="submit" class="button-apply">
+                  <p>Отправить заявку</p>
+                </button>
+              </form>
+              <div class="modal-text _message-success">
+                <p class="modal-heading">Ваша заявка отправлена</p>
+                <p class="modal-text-main">
+                  Специалист свяжется с вами в ближайшее время
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal window -->
+
+    <div class="container">
+      <header class="wrapper">
+        <div class="header-menu" id="headerSticky">
+          <img class="logo" src="./img/logo.svg" alt="logo" />
+          <div class="menu">
+            <a href="#">Главная</a>
+            <a href="#vs">Доходность</a>
+            <a href="#risks">Риски</a>
+            <a href="#contacts">Контакты</a>
+          </div>
+          <div class="call">
+            <a class="call-order" href="tel:+79131780020"
+              ><p class="call-order-tel">+7 (977) 820-93-08</p>
+              <p></p
+            ></a>
+            <a class="call-order" href="#openModal"
+              ><p class="call-order-ring">Заказать звонок</p></a
+            >
+          </div>
+        </div>
+        <div class="under-header">
+          <div class="invest-header">
+            <p class="invest-text">Инвестируйте в загородную недвижимость</p>
+            <p class="invest-text-under">с доходностью от 40% годовых</p>
+          </div>
+          <a href="#openModal" class="button-apply"><p>Отправить заявку</p></a>
+        </div>
+        <img
+          class="img-background"
+          src="./img/background.jpg"
+          alt="background"
+        />
+        <div class="point-wrapper">
+          <div class="point-item location">
+            <img class="point-img" src="./img/location.svg" alt="location" />
+            <p class="point-text-one">Расположение</p>
+            <p class="point-text-two">60 км от МКАД, Истра</p>
+          </div>
+          <div class="point-item">
+            <img class="point-img" src="./img/chart.svg" alt="chart" />
+            <p class="point-text-one">Доходность</p>
+            <p class="point-text-two">38 - 100% в год</p>
+          </div>
+          <div class="point-item">
+            <img class="point-img" src="./img/wallet.svg" alt="wallet" />
+            <p class="point-text-one">Цена покупки коттеджа</p>
+            <p class="point-text-two">от 915 тыс с участком</p>
+          </div>
+          <div class="point-item">
+            <img class="point-img" src="./img/time.svg" alt="time" />
+            <p class="point-text-one">Срок строительства дома</p>
+            <p class="point-text-two">3 месяца под ключ</p>
+          </div>
+        </div>
+      </header>
+      <main class="wrapper">
+        <section class="profitability">
+          <p class="heading-one">
+            Инвестирование<br class="small" />
+            в недвижимость<br class="big" />
+            всегда<br class="small" />
+            было достаточно выгодно
+          </p>
+          <p class="heading-two">
+            В сегодняшней ситуации, когда классические инвестиционные
+            инструменты перестали работать, или становятся<br
+              class="big"
+            />чрезмерно рискованными становятся актуальными инвестиции
+            обеспеченные реальной стоимостью имеют<br class="big" />
+            практическую ценность, которую можно реализовать.
+          </p>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/house-one.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/house-two.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/house-three.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/house-four.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </section>
+        <section class="vs">
+          <p class="heading-one">
+            <a name="vs"></a>Давайте сравним два вида инвестиций
+          </p>
+          <div class="vs-point-wrapper">
+            <div class="vs-point-item-white">
+              <div class="vs-point-item-heading-wrapper">
+                <img
+                  class="img-city-building"
+                  src="./img/city-building.svg"
+                  alt="city-building"
+                />
+                <p class="vs-point-item-heading">Городские новостройки</p>
+              </div>
+
+              <div class="vs-point-item-block-one-wrapper">
+                <div class="vs-point-item-block-one">
+                  <p class="vs-point-item-heading">2 года</p>
+                  <p class="vs-point-item-text">
+                    средний срок<br class="big" /><br class="small" />
+                    строительства<br class="small" />
+                    дома
+                  </p>
+                </div>
+                <div class="vs-point-item-block-one">
+                  <p class="vs-point-item-heading">6%</p>
+                  <p class="vs-point-item-text">
+                    средний доход<br class="small" />
+                    в<br class="big" />
+                    годовых
+                  </p>
+                </div>
+              </div>
+              <div class="vs-point-item-block-two-wrapper">
+                <ul style="list-style-type: disc" class="vs-point-item-text">
+                  <li>Дом строится в среднем 2 года;</li>
+                  <li>Средний доход составляет 25%.</li>
+                  <li>При вычете НДФЛ остается 25%- 13% = 12%</li>
+                  <li>В пересчете на годовую доходность это составляет 6%.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="vs-point-item-blue">
+              <div class="vs-point-item-heading-wrapper">
+                <img
+                  class="img-suburbs-building"
+                  src="./img/suburbs-building.svg"
+                  alt="suburbs-building"
+                />
+                <p class="vs-point-item-heading">Загородная недвижимость</p>
+              </div>
+
+              <div class="vs-point-item-block-one-wrapper">
+                <div class="vs-point-item-block-one">
+                  <p class="vs-point-item-heading">3 месяца</p>
+                  <p class="vs-point-item-text">
+                    средний срок<br class="big" /><br class="small" />
+                    строительства<br class="small" />
+                    дома
+                  </p>
+                </div>
+                <div class="vs-point-item-block-one">
+                  <p class="vs-point-item-heading">>25%</p>
+                  <p class="vs-point-item-text">
+                    средний доход<br class="small" />
+                    в<br class="big" />
+                    годовых
+                  </p>
+                </div>
+              </div>
+              <div class="vs-point-item-block-two-wrapper">
+                <ul style="list-style-type: disc" class="vs-point-item-text">
+                  <li>Доход в размере более 25% годовых;</li>
+                  <li>
+                    Актуально именно сейчас, когда инвестиции в ценные<br
+                      class="big"
+                    />
+                    бумаги стали слишком рискованны;
+                  </li>
+                  <li>
+                    В отличие от бумаг, которые обеспечены только рыночной<br
+                      class="big"
+                    />
+                    стоимостью инвестор получает актив, который имеет<br
+                      class="big"
+                    />
+                    кроме виртуальной стоимости реальную ценность.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="profit">
+          <div class="profit-how">
+            <div class="profit-how-wrapper">
+              <p class="heading-one margin-bottom">Как это работает</p>
+              <p style="word-wrap: break-word" class="heading-two">
+                Рассмотрим на примере инвестирования строительства двух домов в
+                поселке «Майские дачи» в Истринском районе, рядом с Истринским
+                водохранилищем, всего в 60 км от Москвы.
+              </p>
+            </div>
+            <a class="button-more" href="#"><p>Подробнее о поселке</p></a>
+          </div>
+          <div class="profit-charter">
+            <img
+              class="img-house-planning-big"
+              src="./img/house-planning-one.jpg"
+              alt="house-planning-one"
+            />
+            <div class="profit-charter-text-wrapper">
+              <p class="profit-charter-text-heading">
+                Строительство дома <strong>64 м&sup2</strong> + терраса
+                <strong>15 м&sup2</strong> на участке <strong>10 соток</strong>
+              </p>
+              <ul class="profit-charter-list">
+                <li class="profit-charter-text-list">
+                  Стоимость строительства дома с полной отделкой,<br
+                    class="big"
+                  />
+                  коммуникациями и земельным участком-
+                  <strong>6.6 млн рублей</strong>
+                </li>
+                <li class="profit-charter-text-list">
+                  Стоимость продажи готового дома по рынку -
+                  <strong>8.5 млн рублей</strong><br />
+                  Срок строительства дома - 3 месяца<br />
+                  Срок реализации готового дома - 3 месяца<br />
+                  Доход от вложений 6.6 млн рублей составит
+                  <strong>1.9 млн рублей</strong>
+                </li>
+              </ul>
+              <p class="profit-charter-text-heading">Расходы:</p>
+              <ul class="profit-charter-list expenses">
+                <li class="profit-charter-text-list">
+                  <p>
+                    НДФЛ 13% от дохода - 191 тыс рублей<br />
+                    Услуги риэлтора по продаже 5% - 425 тыс рублей
+                  </p>
+                </li>
+              </ul>
+              <p class="profit-charter-text-result">
+                прибыль за 6 месяцев 1 284 000 рублей или 19% от вложенной суммы
+                <strong>Это 38% годовых</strong>
+              </p>
+              <div class="profit-charter-text-inner-wrapper">
+                <div class="profit-charter-text-inner-block">
+                  <p class="profit-charter-text-figures">6.6 млн</p>
+                  <p class="profit-charter-text-underfigures">
+                    вложения в проект
+                  </p>
+                </div>
+                <div class="profit-charter-text-inner-block">
+                  <p class="profit-charter-text-figures">1.284 млн</p>
+                  <p class="profit-charter-text-underfigures">
+                    доход с инвестиций
+                  </p>
+                </div>
+                <div class="profit-charter-text-inner-block">
+                  <p class="profit-charter-text-figures">38%</p>
+                  <p class="profit-charter-text-underfigures">
+                    прибыль в годовых
+                  </p>
+                </div>
+              </div>
+            </div>
+            <img
+              class="img-house-planning-small"
+              src="./img/house-planning-one.jpg"
+              alt="house-planning-one"
+            />
+            <div class="button-apply-wrapper">
+              <a class="button-apply" href="#openModal"
+                ><p>Получить расчет</p></a
+              >
+            </div>
+          </div>
+          <div class="button-apply-wrapper-big">
+            <a class="button-apply" href="#openModal"><p>Получить расчет</p></a>
+          </div>
+          <div class="profit-charter charter-two">
+            <div class="profit-charter-text-wrapper">
+              <p class="profit-charter-text-heading">
+                Строительство дома <strong>101 м&sup2</strong> + терраса
+                <strong>24 м&sup2</strong> на участке <strong>10 соток</strong>
+              </p>
+              <ul class="profit-charter-list">
+                <li class="profit-charter-text-list">
+                  Стоимость строительства дома с полной отделкой,<br
+                    class="big"
+                  />
+                  коммуникациями и земельным участком -
+                  <strong>8.3 млн рублей</strong>
+                </li>
+                <li class="profit-charter-text-list">
+                  Стоимость продажи готового дома по рынку -
+                  <strong>10.9 млн рублей</strong><br class="big" />Срок
+                  строительства дома - 3 месяца<br class="big" />
+                  Срок реализации готового дома - 3 месяца<br class="big" />
+                  Доход от вложений 8.3 млн рублей составит
+                  <strong>2.6 млн рублей</strong>
+                </li>
+              </ul>
+              <p class="profit-charter-text-heading">Расходы:</p>
+              <ul class="profit-charter-list expenses">
+                <li class="profit-charter-text-list">
+                  НДФЛ 13% от дохода - 266 тыс рублей<br class="big" />
+                  Услуги риэлтора по продаже 5% - 545 тыс рублей
+                </li>
+              </ul>
+              <p class="profit-charter-text-result">
+                прибыль за 6 месяцев 1 789 000 рублей или 21.5% от вложенной
+                суммы
+                <strong>Это 43% годовых</strong>
+              </p>
+              <div class="profit-charter-text-inner-wrapper">
+                <div class="profit-charter-text-inner-block">
+                  <p class="profit-charter-text-figures">8.3 млн</p>
+                  <p class="profit-charter-text-underfigures">
+                    вложения в проект
+                  </p>
+                </div>
+                <div class="profit-charter-text-inner-block">
+                  <p class="profit-charter-text-figures">1.789 млн</p>
+                  <p class="profit-charter-text-underfigures">
+                    доход с инвестиций
+                  </p>
+                </div>
+                <div class="profit-charter-text-inner-block">
+                  <p class="profit-charter-text-figures">43%</p>
+                  <p class="profit-charter-text-underfigures">
+                    прибыль в годовых
+                  </p>
+                </div>
+              </div>
+            </div>
+            <img
+              class="img-house-planning-big"
+              src="./img/house-planning-two.jpg"
+              alt="house-planning-two"
+            />
+            <img
+              class="img-house-planning-small"
+              src="./img/house-planning-two.jpg"
+              alt="house-planning-two"
+            />
+            <div class="button-apply-wrapper">
+              <a class="button-apply" href="#openModal"
+                ><p>Получить расчет</p></a
+              >
+            </div>
+          </div>
+          <div class="button-apply-wrapper-big">
+            <a class="button-apply" href="#openModal"><p>Получить расчет</p></a>
+          </div>
+        </section>
+        <section class="credit">
+          <div class="credit-heading">
+            <p class="heading-one">
+              Нет 6,6 млн, можно ли участвовать в проекте?
+            </p>
+            <p style="color: #565656; font-weight: 400" class="heading-one">
+              Да, можно! И доходность проекта будет больше!
+            </p>
+          </div>
+          <div class="credit-charter-wrapper">
+            <img
+              class="img-credit-charter-big"
+              src="./img/credit-charter-pic.jpg"
+              alt="credit-charter-pic"
+            />
+            <div class="credit-charter-text-wrapper">
+              <p class="credit-charter-text-list">
+                Можно использовать ипотечные программы с минимальными
+                собственными вложениями:
+              </p>
+              <ul class="credit-charter-list">
+                <li class="credit-charter-text-list">
+                  Собственный взнос по ипотеке - 15%, это 990 000 рублей
+                </li>
+                <li class="credit-charter-text-list">
+                  Ежемесячные платежи по ипотеке - 38 461 в течении 6
+                  месяцев,<br class="big" />230 766 рублей
+                </li>
+                <li class="credit-charter-text-list">
+                  Собственные вложения составят 1 220 766 рублей
+                </li>
+              </ul>
+              <p class="credit-charter-text-result">
+                Прибыль останется прежней - 1 284 000 рублей<br class="big" />
+                <strong>это больше 100% за полгода</strong>
+              </p>
+              <div class="credit-charter-text-inner-wrapper">
+                <div class="credit-charter-text-inner-block">
+                  <p class="credit-charter-text-figures">1.220 млн</p>
+                  <p class="credit-charter-text-underfigures">
+                    вложения в проект
+                  </p>
+                </div>
+                <div class="credit-charter-text-inner-block">
+                  <p class="credit-charter-text-figures">1.284 тыс</p>
+                  <p class="credit-charter-text-underfigures">
+                    доход с инвестиций
+                  </p>
+                </div>
+                <div class="credit-charter-text-inner-block">
+                  <p class="credit-charter-text-figures">>100%</p>
+                  <p class="credit-charter-text-underfigures">
+                    прибыль в годовых
+                  </p>
+                </div>
+              </div>
+            </div>
+            <img
+              class="img-credit-charter-small"
+              src="./img/credit-charter-pic.jpg"
+              alt="credit-charter-pic"
+            />
+          </div>
+        </section>
+        <section class="risks">
+          <div class="risks-heading">
+            <p class="heading-one"><a name="risks"></a>Какие риски?</p>
+            <p style="color: #565656; font-weight: 400" class="heading-one">
+              риски минимальные!
+            </p>
+          </div>
+          <div class="risks-items-wrapping">
+            <div class="risks-item-block">
+              <div class="risks-item-inner">
+                <img
+                  class="img-risks-item-icon"
+                  src="./img/risk-location.svg"
+                  alt="risks-location"
+                />
+                <p class="risks-item-inner-heading">
+                  Надежная<br class="small" />
+                  земельная<br class="small" />
+                  компания
+                </p>
+                <p class="risks-item-inner-text">
+                  Земля в готовом<br class="small" />
+                  коттеджном поселке
+                </p>
+              </div>
+            </div>
+            <div class="risks-item-block">
+              <div class="risks-item-inner">
+                <img
+                  class="img-risks-item-icon"
+                  src="./img/risk-exp.svg"
+                  alt="risks-exp"
+                />
+                <p class="risks-item-inner-heading">
+                  Профессиональ<br class="small" />ная строительная<br
+                    class="small"
+                  />
+                  компания
+                </p>
+                <p class="risks-item-inner-text">
+                  Большой опыт,<br class="small" />
+                  высокое качество<br class="small" />
+                  строительства,<br class="small" />
+                  проверенные технологии
+                </p>
+              </div>
+            </div>
+
+            <div class="risks-item-block second">
+              <div class="risks-item-inner">
+                <img
+                  class="img-risks-item-icon"
+                  src="./img/risk-home.svg"
+                  alt="risks-home"
+                />
+                <p class="risks-item-inner-heading">
+                  Получаете готовый<br class="small" />
+                  объект<br class="small" />
+                  недвижимости
+                </p>
+                <p class="risks-item-inner-text">
+                  А не бумагу или<br class="small" />
+                  сертификат
+                </p>
+              </div>
+            </div>
+            <div class="risks-item-block second">
+              <div class="risks-item-inner">
+                <img
+                  class="img-risks-item-icon"
+                  src="./img/risk-money.svg"
+                  alt="risks-money"
+                />
+                <p class="risks-item-inner-heading">
+                  Дом можно<br class="small" />
+                  сдавать
+                </p>
+                <p class="risks-item-inner-text">
+                  Если есть желание<br class="small" />
+                  оставить<br class="small" />
+                  недвижимость
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="rent">
+          <div class="rent-heading">
+            <p class="heading-one">Рассчитаем прибыль от аренды</p>
+          </div>
+          <div class="rent-charter-wrapper">
+            <div class="rent-charter-text-wrapper">
+              <ul class="rent-charter-list">
+                <li class="rent-charter-text-list">
+                  Средняя цена аренды такого дома составляет
+                  <strong>5 000 рублей в сутки</strong>
+                </li>
+                <li class="rent-charter-text-list">
+                  При загрузке 70%, доход от аренды
+                  <strong>105 000 рублей в месяц</strong> <br class="big" />
+                  В новогодние и майские праздники доход от сдачи
+                  <strong>150-200 000 рублей</strong>
+                </li>
+                <li class="rent-charter-text-list">
+                  Доход 105 000 (доход от аренды) – 38 500 (ипотечные платежи) -
+                  9 000<br class="big" />
+                  (эксплуатационные расходы) = <strong>57 500 рублей</strong>
+                </li>
+                <li class="rent-charter-text-list">
+                  1 220 766/57 500 900= 22 месяца (менее 2 лет) срок
+                  окупаемости<br class="big" />
+                  инвестиций
+                </li>
+              </ul>
+              <div class="rent-charter-text-inner-wrapper">
+                <div class="rent-charter-text-inner-block">
+                  <p class="rent-charter-text-figures">1.220 млн</p>
+                  <p class="rent-charter-text-underfigures">
+                    вложения в проект
+                  </p>
+                </div>
+                <div class="rent-charter-text-inner-block">
+                  <p class="rent-charter-text-figures">57.5 тыс</p>
+                  <p class="rent-charter-text-underfigures">
+                    доход с инвестиций
+                  </p>
+                </div>
+                <div class="rent-charter-text-inner-block">
+                  <p class="rent-charter-text-figures"><2 года</p>
+                  <p class="rent-charter-text-underfigures">окупаемость</p>
+                </div>
+              </div>
+            </div>
+            <img
+              class="img-house-planning-big"
+              src="./img/rent-charter-photo.jpg"
+              alt="rent-charter-photo"
+            />
+            <img
+              class="img-house-planning-small"
+              src="./img/rent-charter-photo.jpg"
+              alt="rent-charter-photo"
+            />
+          </div>
+        </section>
+        <section class="lidmagnit">
+          <div class="lidmagnit-text-wrapper">
+            <p class="lidmagnit-text-header">
+              Инвестиции в недвижимость являются<br class="big" />
+              наиболее надежными
+            </p>
+            <p class="lidmagnit-text-main">
+              Даже несмотря на временные спады стоимость недвижимости продолжает
+              расти.<br class="big" />
+              В настоящее время благодаря быстрому сроку строительства и
+              высокому спросу инвестиции в<br class="big" />
+              загородную недвижимость позволяют получить высокую доходность при
+              минимальных рисках.
+            </p>
+          </div>
+          <a class="button-apply-white" href="#openModal"
+            ><p>Отправить заявку</p></a
+          >
+        </section>
+        <section class="form">
+          <div class="form-wrapper">
+            <div class="form-heading-wrapper">
+              <p class="form-heading"><a name="contacts"></a>напишите нам</p>
+              <p class="form-text">
+                Оставьте заявку на бесплатную консультацию<br class="big" />
+                и мы перезвоним вам
+              </p>
+            </div>
+            <form action="#" id="form" class="fm">
+              <input
+                name="name"
+                type="text"
+                placeholder="Имя"
+                value=""
+                class="fm__input _input"
+              />
+              <div>
+                <input
+                  name="tel"
+                  type="tel"
+                  placeholder="Телефон"
+                  value=""
+                  data-phone="cleave"
+                  class="fm__input _input _req"
+                />
+                <p class="required-field">
+                  Это поле обязательно для заполнения
+                </p>
+              </div>
+
+              <textarea
+                name="msg"
+                type="text"
+                placeholder="Сообщение"
+                value=""
+                class="fm__input _message"
+              ></textarea>
+              <div class="checkbox-wrapper">
+                <input
+                  type="checkbox"
+                  class="custom-checkbox"
+                  id="checkbox"
+                  name="checkbox"
+                  value="yes"
+                  required
+                />
+                <label for="checkbox"
+                  ><p class="checkbox-text">
+                    Согласен с
+                    <a class="checkbox-text" href="#"
+                      >политикой обработки персональных данных</a
+                    >
+                  </p></label
+                >
+              </div>
+              <button type="submit" class="button-apply">
+                <p>Отправить заявку</p>
+              </button>
+            </form>
+          </div>
+          <img
+            class="img-form-photo-big"
+            src="./img/form-photo.jpg"
+            alt="form-photo"
+          />
+        </section>
+      </main>
+      <footer class="footer">
+        <hr class="line" />
+        <div class="footer-info-wrapper">
+          <div class="footer-info-block">
+            <img class="logo" src="./img/logo.svg" alt="logo" />
+            <p class="footer-info-block-text">
+              ООО «ИИС-Консалтинг»<br class="big" /><br class="small" />
+              ИНН 7716739395 <br class="big" /><br class="small" />
+              КПП 771601001<br class="big" /><br class="small" />
+              ОГРН 1137746188491
+            </p>
+          </div>
+
+          <div class="footer-menu">
+            <a href="#" class="footer-menu-text">Главная</a>
+            <a href="#vs" class="footer-menu-text">Доходность</a>
+            <a href="#risks" class="footer-menu-text">Риски</a>
+            <a href="#contacts" class="footer-menu-text">Контакты</a>
+          </div>
+          <div class="footer-menu-address">
+            <div class="footer-menu-address-ad">
+              <p class="footer-menu-address-ad-dark">Адрес:</p>
+              <p class="footer-menu-address-ad-blue">
+                м. Шаболовская,ул. Хавская, дом 11,<br class="small" />
+                офис 512
+              </p>
+            </div>
+            <div class="footer-menu-address-tel">
+              <p class="footer-menu-address-ad-dark">Контактный телефон:</p>
+              <a class="footer-menu-address-ad-blue" href="tel:+79131780020"
+                >+7 (977) 820-93-08</a
+              >
+              <a class="footer-menu-address-ad-blue" href="#openModal"
+                ><p class="call-order-ring">Заказать звонок</p></a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script>
+      const mySwiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        loop: true,
+        mousewheel: false,
+        effect: "slide",
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+      const returnFunction = () => {
+        const modalForm = document.getElementById("modalForm");
+        modalForm.classList.remove("_hidden");
+        modalForm.previousElementSibling.classList.remove("_hidden");
+        modalForm.nextElementSibling.classList.remove("_success");
+      };
+    </script>
+    <script src="./script.js"></script>
+    <script>
+      window.onscroll = () => {
+        myFunction();
+      };
+      const header = document.getElementById("headerSticky");
+      const sticky = header.offsetTop;
+      const myFunction = () => {
+        if (window.pageYOffset >= sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      };
+    </script>
+  </body>
+</html>

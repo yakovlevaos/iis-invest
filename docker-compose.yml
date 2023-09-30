@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  nginx:
+    build:
+      context: ./deploy/nginx
+      dockerfile: Dockerfile
+    container_name: "php-fpm-nginx-iis"
+    restart: unless-stopped
+    networks:
+      php-cms-iis:
+        ipv4_address: 177.159.0.57
+    volumes:
+      - ./src/site/:/var/www/html/
+    ports: 
+      - 8082:80
+  
+  php:
+    build:
+      context: .
+      dockerfile: deploy/php/Dockerfile
+    container_name: "php-fpm-cms-iis"
+    restart: unless-stopped
+    env_file:
+      - .env
+    networks:
+      - php-cms-iis
+    volumes:
+      - ./src/php/:/var/www/html/
+
+networks:
+  php-cms-iis:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 177.159.0.0/24
